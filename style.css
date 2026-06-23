@@ -1,0 +1,75 @@
+/* Habaynta Guud */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* 1. Flexbox Container Setup */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;       /* Wuxuu keenayaa inuu hoos u dhaco (wrap) marka screen-ku yaraado */
+    justify-content: center;
+    gap: 30px;             /* Masaafada u dhaxaysa box-yada */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Habaynta Box kasta (Gallery Item) */
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+    /* La-qabsiga Cabbirka (Flexible) */
+    flex: 1 1 280px;       /* Wuxuu u weynaan karaa si siman, laakiin kama yaraan karo 280px */
+    max-width: 350px;      /* Si uusan ugu weynaan shaashadaha aadka u waaweyn */
+}
+
+/* 3. Habaynta Sawirka Wareegga ah (Sida tusaalaha) */
+.img-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 4px double #2e7d32; /* Xariiq labo ah oo cagaar ah sigo tusaalaha oo kale */
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Wuxuu ka dhigayaa sawirka inuu si fiican ugu dhex jiro goobada */
+}
+
+/* Qoraalka Cinwaanka (h1) iyo Qoraalka kooban */
+.gallery-item h1 {
+    font-size: 1.3rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.gallery-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
